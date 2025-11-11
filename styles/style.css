@@ -1,3 +1,8 @@
+:root {
+  --base-color: rgb(247, 240 234); //CornSilk;
+  --dark-color: rgb(101, 67, 33);
+  --light-color: rgb(204, 85, 0);
+}
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +17,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
   color: #333;
-  background-color: #fff;
+  background-color: var(--base-color);
 }
 
 a:visited,
@@ -43,12 +48,12 @@ a:target {
 /* ヘッダー */
 .site-header {
   padding: 1rem;
-  background-color: #f5f5f5;
+  background-color: var(--base-color);
   position:relative;
 }
 .site-header h1 {
   font-size:21px;
-  color:#121212;
+  color:var(--dark-color);
   letter-spacing:4px;
   padding-left:.6em;
 }
@@ -121,7 +126,7 @@ a:target {
     padding: 1rem 0;
     width:100%;
     text-align:center;
-    color:white;
+    color:var(--base-color);
   }
 
   /* 開いた状態 */
@@ -173,6 +178,7 @@ a:target {
   letter-spacing:2px;
   font-weight:bold;
   font-size:14px;
+  color:var(--light-color);
   z-index:2;
 }
 .hero::after {
@@ -185,7 +191,7 @@ a:target {
   height:100%;
   background:url('../images/ptbk.png') repeat center;
   background-size:2px 2px;
-  opacity:.8;
+  opacity:0;
   z-index:1;
 }
 @media (max-width: 767px) {
@@ -207,6 +213,7 @@ a:target {
   padding-left:20px;
   letter-spacing:2px;
   position:relative;
+  color:var(--dark-color);
   display:block;
 }
 /*
@@ -225,7 +232,7 @@ a:target {
   padding:1em 20px;
   font-size:16px;
   line-height:1.9em;
-  color:teal !important;
+  color:var(--light-color) !important;
 }
 .content div.inner {
   display: grid;
@@ -241,16 +248,17 @@ a:target {
 
 .card {
   padding: 1rem 1rem 2rem 1rem;
-  border: 1px solid #e9e9e9;
+  border: 1px solid var(--dark-color);
   border-radius: 0.4rem;
 }
 .card h4 {
   width:100%;
   font-size:18px;
   padding:.4em 0 .3em 0;
-  border-bottom:1px solid teal;
+  border-bottom:1px solid var(--light-color);
   margin-bottom:1em;
   letter-spacing:2px;
+  color:var(--dark-color)
 }
 .card p {
   line-height:1.9em;
@@ -261,7 +269,7 @@ a:target {
   padding: 8rem 1rem;
   text-align: center;
   background:url('../images/ptbk.png') repeat center / 2px 2px;
-  background-color:teal;
+  background-color:var(--light-color);
 }
 .site-footer p {
   color:#fff;
