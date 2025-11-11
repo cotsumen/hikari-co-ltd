@@ -80,13 +80,13 @@ a:target {
 /* ハンバーガーボタン */
 .menu-toggle {
   display: none;
-  font-size: 2rem;
+  font-size: 2.4rem;
   background: none;
   border: none;
   cursor: pointer;
   position:absolute;
-  top:10px;
-  right:10px;
+  top:22px;
+  right:14px;
 }
 
 /* PC表示 */
@@ -101,6 +101,15 @@ a:target {
 @media (max-width: 767px) {
   .menu-toggle {
     display: block;
+    color:var(--dark-color);
+    line-height:10px;
+    transition:all .3s 0s ease-in-out;
+  }
+  .menu-toggle span {
+    font-size:8px;
+  }
+  .menu-toggle:hover {
+    color:var(--light-color);
   }
 
   .global-nav {
@@ -110,6 +119,7 @@ a:target {
     transition: max-height 0.4s ease, opacity 0.3s ease;
     z-index:2;
     background:url('../images/ptbk.png') repeat center;
+    filter:invert(100%);
     position: absolute;
     top: 100%;
     left: 0;
@@ -126,7 +136,8 @@ a:target {
     padding: 1rem 0;
     width:100%;
     text-align:center;
-    color:var(--base-color);
+    filter:invert(100%);
+    color:var(--dark-color);
   }
 
   /* 開いた状態 */
@@ -191,7 +202,8 @@ a:target {
   height:100%;
   background:url('../images/ptbk.png') repeat center;
   background-size:2px 2px;
-  opacity:0;
+  filter:invert(100%);
+  opacity:.3;
   z-index:1;
 }
 @media (max-width: 767px) {
