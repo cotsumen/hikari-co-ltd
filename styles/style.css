@@ -196,7 +196,7 @@ a:target {
 }
 @media (max-width: 767px) {
   .hero {
-      padding-top: calc(100% * 1 / 1); /* 縦/横 = 2/3 */
+      padding-top: calc(100% * 2 / 3); /* 縦/横 = 2/3 */
   }
 }
 
