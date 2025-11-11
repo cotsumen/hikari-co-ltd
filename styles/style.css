@@ -166,7 +166,7 @@ a:target {
   padding-top: calc(100% * 9 / 16); /* 縦/横 = 2/3 */
 
   /* 背景画像 */
-  background-image: url('../images/main.webp');
+  background-image: url('../images/main2.webp');
   background-position: center; /* 中央を基準 */
   background-size: cover;      /* 必ず領域いっぱいに */
   background-repeat: no-repeat;
