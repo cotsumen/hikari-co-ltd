@@ -158,6 +158,11 @@ a:target {
   }
 }
 
+.site-main {
+  width:100%;
+  margin-bottom:4rem;
+}
+
 
 /* メインビジュアル */
 .hero {
@@ -304,10 +309,10 @@ a:target {
 }
 /* フッター */
 .site-footer {
-  padding: 8rem 1rem;
+  padding: 6rem 1rem;
   text-align: center;
-  background:url('../images/ptbk.png') repeat center / 2px 2px;
-  background-color:var(--light-color);
+  /*background:url('../images/ptbk.png') repeat center / 2px 2px;*/
+  background-color:var(--dark-color);
 }
 .site-footer p {
   color:#fff;
