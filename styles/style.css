@@ -1,6 +1,7 @@
 :root {
   --base-color: rgb(247, 240 234); //CornSilk;
   --dark-color: rgb(101, 67, 33);
+  --mid-color: rgb(153, 124, 95);
   --light-color: rgb(204, 85, 0);
 }
 * {
@@ -54,7 +55,7 @@ a:target {
 .site-header h1 {
   font-size:21px;
   color:var(--dark-color);
-  letter-spacing:4px;
+  letter-spacing:3px;
   padding-left:.6em;
 }
 
@@ -74,6 +75,7 @@ a:target {
   padding:.4em .8em;
   position:relative;
   letter-spacing:2px;
+  color:var(--dark-color) !important;
 }
 
 
@@ -203,7 +205,7 @@ a:target {
   background:url('../images/ptbk.png') repeat center;
   background-size:2px 2px;
   filter:invert(100%);
-  opacity:.3;
+  opacity:.5;
   z-index:1;
 }
 @media (max-width: 767px) {
@@ -221,12 +223,20 @@ a:target {
 .content h3 {
   margin:2em 0 .4em 0;
   width:100%;
-  font-size:18px;
+  font-size:20px;
   padding-left:20px;
   letter-spacing:2px;
   position:relative;
   color:var(--dark-color);
   display:block;
+}
+.content h3 span {
+  display:inline-block;
+  vertical-align:bottom;
+  font-size:15px;
+  text-indent:.6em;
+  letter-spacing:.4px;
+  color:var(--mid-color);
 }
 /*
 .content h3::after {
@@ -275,6 +285,7 @@ a:target {
 .card p {
   line-height:1.9em;
   font-size:15px;
+  color:var(--mid-color);
 }
 /* フッター */
 .site-footer {
