@@ -297,6 +297,7 @@ a:target {
 }
 .content div.pannel button:hover {
   background-color:var(--light-color);
+  padding:1.1rem 1.2rem 1.3rem 1.2rem;
 }
 
 .content .flat {
@@ -390,6 +391,7 @@ a:target {
   height:1em;
   font-size:46px;
   color:var(--light-color);
+  padding:0;
   border:none;
   background:transparent;
   transition:all .4s 0s ease-in-out;
