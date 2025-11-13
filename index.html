@@ -4,29 +4,39 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="format-detection" content="telephone=no">
-  <title>株式会社ひかり | HIKARI-INC</title>
+  <title>株式会社ひかり | Hikari Consulting Inc.</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles/style.css">
 </head>
-<body>
+<body class="disable">
   <header class="site-header">
-    <h1 class="noto-sans-jp normal">HIKARI Co., Ltd.</h1>
+    <h1 class="noto-sans-jp normal">Hikari Consulting Inc.</h1>
     <button class="menu-toggle" aria-label="メニューを開く">☰<br><span>MENU</span></button>
 
     <nav class="global-nav">
       <ul>
-        <li><a class="noto-sans-jp" href="#">HOME</a></li>
+        <li><a class="noto-sans-jp" href="./">HOME</a></li>
         <li><a class="noto-sans-jp" href="#">ABOUT</a></li>
-        <li><a class="noto-sans-jp" href="#">CONTACT</a></li>
+        <li><a class="noto-sans-jp" href="./contact.html">CONTACT</a></li>
       </ul>
     </nav>
   </header>
 
   <main class="site-main">
     <section class="hero">
-      <h2 class="noto-sans-jp bold">HIKARI Co., Ltd.</h2>
+      <h2 class="noto-serif-jp bold">株式会社ひかり</h2>
+    </section>
+
+    <section class="content">
+      <h3 class="noto-sans-jp bold">企業理念<span>CORPORATE PHILOSOPHY</span></h3>
+      <div class="summary">
+        <p class="noto-serif-jp normal">医療の理想を、仕組みで支える。</p>
+        <p class="noto-serif-jp normal">私たちは、経営の力で崩れかけた医療を立て直し、現場に再び“ひかり”を呼び戻すチームです。</p>
+        <p class="noto-serif-jp normal">経営再建・PMI・新規事業を通じて、医療が持続可能となる未来をデザインします。</p>
+        <h4 class="noto-serif-jp bold">株式会社ひかり</h4>
+      </div>
     </section>
 
     <section class="content">
@@ -57,13 +67,22 @@
       </div>
     </section>
 
-    
-
+    <section class="content">
+      <h3 class="noto-sans-jp bild">お問合せ<span>CONTACT</span></h3>
+      
+    </section>
   </main>
 
   <footer class="site-footer">
     <p class="noto-sans-jp">Copyright &copy; 2025 HIKARI Co., Ltd.</p>
   </footer>
+
+  <div id="contact-popup">
+    <div class="google-form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehBwmKfSsZJ-LUpTp9fZ0qakSzC_l2BMRGn29AOLX5uV9cvQ/viewform?embedded=true" height="300" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    </div>
+  </div>
+
   <script src="./js/main.js"></script>
 </body>
 </html>

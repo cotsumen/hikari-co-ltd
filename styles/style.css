@@ -1,5 +1,5 @@
 :root {
-  --base-color: rgb(247, 240 234); //CornSilk;
+  --base-color: rgb(247, 240 234);
   --dark-color: rgb(101, 67, 33);
   --mid-color: rgb(153, 124, 95);
   --light-color: rgb(204, 85, 0);
@@ -19,6 +19,22 @@ body {
   line-height: 1.5;
   color: #333;
   background-color: var(--base-color);
+}
+body.disabled {
+  width:100vw;
+  height:100vh;
+  overflow:hidden;
+}
+body.disabled::after {
+  content:"";
+  display:block;
+  position:fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  height:100vh;
+  z-index:100;
+  background:rgba(255,255,255,.7);
 }
 
 a:visited,
@@ -170,7 +186,7 @@ a:target {
   width: 100%;
   
   /* アスペクト比 2:3 を維持 */
-  padding-top: calc(100% * 9 / 16); /* 縦/横 = 2/3 */
+  aspect-ratio:16 / 9;
 
   /* 背景画像 */
   background-image: url('../images/main2.webp');
@@ -179,25 +195,24 @@ a:target {
   background-repeat: no-repeat;
 
   /* テキストを中央に配置したい場合 */
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-align: center;
-  color: #fff;
 }
-
+.hero p {
+  color:var(--light-color);
+  display:block;
+}
 .hero h2 {
-  position: absolute; /* 親.hero内で中央に固定 */
-  bottom: 0%;
-  right: 0%;
-  transform: translate(-10%, -50%);
-  margin: 0;
+  position:absolute;
+  display:block;
   font-size: 2rem;
   letter-spacing:2px;
   font-weight:bold;
-  font-size:14px;
-  color:var(--light-color);
-  z-index:2;
+  font-size:18px;
+  color:var(--dark-color);
+  bottom:1.6em;
+  right:0;
+  left:0;
+  margin:auto;
 }
 .hero::after {
   content:"";
@@ -210,12 +225,12 @@ a:target {
   background:url('../images/ptbk.png') repeat center;
   background-size:2px 2px;
   filter:invert(100%);
-  opacity:.5;
+  opacity:.4;
   z-index:1;
 }
 @media (max-width: 767px) {
   .hero {
-      padding-top: calc(100% * 2 / 3); /* 縦/横 = 2/3 */
+      aspect-ratio: 3 / 2; /* 縦/横 = 2/3 */
   }
 }
 
@@ -243,12 +258,22 @@ a:target {
   letter-spacing:.4px;
   color:var(--mid-color);
 }
-.content p.summary {
+.content .summary {
   padding:1em 20px;
-  font-size:16px;
-  line-height:1.9em;
   color:var(--light-color) !important;
 }
+.content .summary h4 {
+  font-size:20px;  
+  padding-top:1em;
+  color:var(--dark-color);
+  text-align:right;
+}
+.content .summary p {
+  line-height:1.4em;
+  font-size:22px;
+  padding-bottom:.6em;
+}
+
 .content div.inner {
   display: grid;
   grid-template-columns: 1fr;
@@ -307,6 +332,40 @@ a:target {
   font-size:15px;
   color:var(--mid-color);
 }
+
+#contact-popup {
+  display:none;
+  position:fixed;
+  width:calc(100vw - 2rem);
+  height:calc(100vh - 2rem);
+  max-width:calc(640px + 2rem);
+  top:0;
+  bottom:0;;
+  left:0;
+  right:0;
+  margin:auto;
+  z-index:101;
+  overflow-y:scroll;
+  overflow-x:hidden;
+  background:var(--base-color);
+}
+
+.google-form-container {
+  padding:1rem;
+  position: relative;
+  width: calc(100vw - 4rem);
+  height:calc(100vh - 4rem);
+}
+.google-form-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100%;
+  border: 0;
+}
+
+
 /* フッター */
 .site-footer {
   padding: 6rem 1rem;
