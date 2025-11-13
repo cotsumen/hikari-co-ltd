@@ -68,7 +68,10 @@
     </section>
 
     <section class="content">
-      <h3 class="noto-sans-jp bild">お問合せ<span>CONTACT</span></h3>
+      <h3 class="noto-sans-jp bold">お問合せ<span>CONTACT</span></h3>
+      <div class="pannel">
+        <button id="trigger-contact" type="button" value="contact-popup">お問合せする</button>
+      </div>
       
     </section>
   </main>
@@ -77,10 +80,11 @@
     <p class="noto-sans-jp">Copyright &copy; 2025 HIKARI Co., Ltd.</p>
   </footer>
 
-  <div id="contact-popup">
+  <div id="contact-popup" class="disabled">
     <div class="google-form-container">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehBwmKfSsZJ-LUpTp9fZ0qakSzC_l2BMRGn29AOLX5uV9cvQ/viewform?embedded=true" height="300" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
     </div>
+    <button id="remover-contact" type="button" value="contact-popup">×</button>
   </div>
 
   <script src="./js/main.js"></script>

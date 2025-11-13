@@ -1,5 +1,5 @@
 :root {
-  --base-color: rgb(247, 240 234);
+  --base-color: rgb(247, 240, 234);
   --dark-color: rgb(101, 67, 33);
   --mid-color: rgb(153, 124, 95);
   --light-color: rgb(204, 85, 0);
@@ -18,7 +18,7 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   line-height: 1.5;
   color: #333;
-  background-color: var(--base-color);
+  background-color: white;
 }
 body.disabled {
   width:100vw;
@@ -65,7 +65,7 @@ a:target {
 /* ヘッダー */
 .site-header {
   padding: 1rem;
-  background-color: var(--base-color);
+  background-color: white;
   position:relative;
 }
 .site-header h1 {
@@ -269,8 +269,8 @@ a:target {
   text-align:right;
 }
 .content .summary p {
-  line-height:1.4em;
-  font-size:22px;
+  line-height:1.5em;
+  font-size:20px;
   padding-bottom:.6em;
 }
 
@@ -278,7 +278,25 @@ a:target {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.4rem 1rem;
+}
+
+.content div.pannel button {
+  display:block;
+  background:var(--dark-color);
+  border:none;
+  color:white !important;
+  font-weight:bold;
+  padding:1.2rem;
+  width:250px;
+  margin:2.4rem auto;
+  font-size:16px;
+  letter-spacing:1px;
+  border-radius:.4rem;
+  transition:all .4s 0s ease-in-out;
+}
+.content div.pannel button:hover {
+  background-color:var(--light-color);
 }
 
 .content .flat {
@@ -334,27 +352,57 @@ a:target {
 }
 
 #contact-popup {
-  display:none;
+  display:block;
   position:fixed;
   width:calc(100vw - 2rem);
-  height:calc(100vh - 2rem);
+  height:calc(100vh - 4rem);
   max-width:calc(640px + 2rem);
   top:0;
-  bottom:0;;
+  bottom:0;
   left:0;
   right:0;
   margin:auto;
   z-index:101;
   overflow-y:scroll;
   overflow-x:hidden;
-  background:var(--base-color);
+  background-color: white;
+  visibility:visible;
+  pointer-events:auto;
+  padding:1.4rem .6rem;
+  border-radius:.4rem;
+  opacity:1;
+  box-shadow:0 0 8px 8px rgba(195,195,195,.5);
+  transition:all .4s 0s ease-in-out;
 }
-
+#contact-popup.disabled {
+  opacity:0;
+  display:none;
+  visibility:hidden;
+  pointer-events:none;
+  transition:all .4s 0s ease-in-out;
+}
+#contact-popup>button {
+  position:absolute;
+  display:inline-block;
+  top:0;
+  right:0;
+  width:1em;
+  height:1em;
+  font-size:46px;
+  color:var(--light-color);
+  border:none;
+  background:transparent;
+  transition:all .4s 0s ease-in-out;
+}
+#contact-popup>button:hover {
+  color:var(--dark-color);
+}
 .google-form-container {
-  padding:1rem;
   position: relative;
-  width: calc(100vw - 4rem);
-  height:calc(100vh - 4rem);
+  padding:0 !important;
+  margin:0 !important;
+  width: 100%;
+  height:100%;
 }
 .google-form-container iframe {
   position: absolute;
