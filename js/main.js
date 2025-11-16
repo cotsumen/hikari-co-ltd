@@ -44,3 +44,12 @@ document.getElementById('remover-contact')?.addEventListener('click', e => {
   }
 });
 
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+      observer.unobserver(entry);
+    }
+  });
+});
+document.querySelectorAll('section.content').forEach(target => observer.observe(target));

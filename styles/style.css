@@ -238,7 +238,12 @@ a:target {
 .content {
   width:100%;
   max-width:1180px;
-  margin:0 auto;
+  margin:5rem auto;
+  opacity:0;
+  transition:all 1s 0s ease-in-out;
+}
+.content.active {
+  opacity:1;
 }
 .content h3 {
   margin:2em 0 .4em 0;
@@ -269,13 +274,13 @@ a:target {
   text-align:right;
 }
 .content .summary h5 {
-  line-height:1.5em;
+  line-height:1.7em;
   font-size:20px;
   padding-bottom:.6em;
 }
 .content .summary p {
   line-height:1.5em;
-  font-size:16px;
+  font-size:15px;
   padding-bottom:.6em;
 }
 
@@ -286,7 +291,7 @@ a:target {
   padding: 1.4rem 1rem;
 }
 
-.content div.pannel button {
+.content div.pannel .button {
   display:block;
   background:var(--dark-color);
   border:none;
@@ -299,8 +304,10 @@ a:target {
   letter-spacing:1px;
   border-radius:.4rem;
   transition:all .4s 0s ease-in-out;
+  text-align:center;
+  text-decoration:none;
 }
-.content div.pannel button:hover {
+.content div.pannel .button:hover {
   background-color:var(--light-color);
   padding:1.1rem 1.2rem 1.3rem 1.2rem;
 }
@@ -355,6 +362,7 @@ a:target {
   line-height:1.9em;
   font-size:15px;
   color:var(--mid-color);
+  min-height:5.7em;
 }
 
 .content .works {
@@ -396,6 +404,9 @@ a:target {
 }
 .content .works div img {
   width:100%;
+}
+.content .works .work p {
+  padding-bottom:1.8em;
 }
 
 #contact-popup {
