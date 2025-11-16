@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <title>株式会社ひかり | 実績紹介</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body class="disable">
+  <header class="site-header">
+    <h1 class="noto-sans-jp normal">Hikari Consulting Inc.</h1>
+    <button class="menu-toggle" aria-label="メニューを開く">☰<br><span>MENU</span></button>
+
+    <nav class="global-nav">
+      <ul>
+        <li><a class="noto-sans-jp" href="./">HOME</a></li>
+        <li><a class="noto-sans-jp" href="#">ABOUT</a></li>
+        <li><a class="noto-sans-jp" href="#contact-section">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-main">
+    <section class="content">
+      <h3 class="noto-sans-jp bold">実績紹介<span>OUR WORK</span></h3>
+      <ul class="works">
+        <li class="work">
+          <div class="thumbnail">
+            <img src="./images/main2.webp" alt>
+          </div>
+          <div class="description">
+            <h4 class="noto-sans-jp bold"><span>医療法人社団広恵会</span><br>春山記念病院</h4>
+            <p>〒169-0073<br>東京都新宿区百人町１丁目２４−５</p>
+          </div>
+        </li>
+        <li class="work">
+          <div class="thumbnail">
+            <img src="./images/main2.webp" alt>
+          </div>
+          <div class="description">
+            <h4 class="noto-sans-jp bold"><span>医療法人社団千秋会</span><br>田中吉祥寺病院</h4>
+            <p>〒177-0053<br>東京都練馬区関町南３丁目９−２３</p>
+          </div>
+        </li>
+        <li class="work">
+          <div class="thumbnail">
+            <img src="./images/main2.webp" alt>
+          </div>
+          <div class="description">
+            <h4 class="noto-sans-jp bold"><span>医療法人社団亮正会</span><br>総合高津中央病院</h4>
+            <p>〒213-0001<br>神奈川県川崎市高津区溝口１丁目１６−７</p>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="contact-section" class="content">
+      <h3 class="noto-sans-jp bold">お問合せ<span>CONTACT</span></h3>
+      <div class="pannel">
+        <button id="trigger-contact" type="button" value="contact-popup">お問合せする</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="noto-sans-jp">Copyright &copy; 2025 Hikari Consulting Inc.</p>
+  </footer>
+
+  <div id="contact-popup" class="disabled">
+    <div class="google-form-container">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSehBwmKfSsZJ-LUpTp9fZ0qakSzC_l2BMRGn29AOLX5uV9cvQ/viewform?embedded=true" height="300" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
+    </div>
+    <button id="remover-contact" type="button" value="contact-popup">×</button>
+  </div>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

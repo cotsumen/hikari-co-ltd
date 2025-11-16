@@ -207,7 +207,7 @@ a:target {
   font-size: 2rem;
   letter-spacing:2px;
   font-weight:bold;
-  font-size:18px;
+  font-size:16px;
   color:var(--dark-color);
   bottom:1.6em;
   right:0;
@@ -355,6 +355,47 @@ a:target {
   line-height:1.9em;
   font-size:15px;
   color:var(--mid-color);
+}
+
+.content .works {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  padding: 1.4rem 1rem;
+  list-style:none;
+}
+.content .works li.work { 
+  display: grid !important;
+  gap: 1rem;
+}
+@media (max-width: 767px) {
+  .content .works {
+    grid-template-columns:1fr;
+  }
+  .content .works li.work { 
+    grid-template-columns: 1fr 2fr;
+  }
+}
+@media (min-width: 768px) {
+  .content .works {
+    grid-template-columns:1fr 1fr;
+  }
+  .content .works li.work { 
+    grid-template-columns: 1fr;
+  }
+}
+.content .works h4 {
+  width:100%;
+  margin:0 0 1em 0;
+  font-size:18px;
+}
+.content .works h4 span {
+  font-size:14px;
+  color:var(--mid-color);
+  line-height:1em;
+}
+.content .works div img {
+  width:100%;
 }
 
 #contact-popup {
