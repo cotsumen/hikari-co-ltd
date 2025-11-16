@@ -71,7 +71,7 @@ a:target {
 .site-header h1 {
   font-size:21px;
   color:var(--dark-color);
-  letter-spacing:3px;
+  letter-spacing:1px;
   padding-left:.6em;
 }
 
@@ -467,6 +467,18 @@ a:target {
   position: absolute;
   top: 0;
   left: 0;
+  width: 100% !important;
+  height: 100%;
+  border: 0;
+}
+.google-form-container-page {
+  position: relative;
+  padding:0 !important;
+  margin:3rem 0 !important;
+  width: 100%;
+  height:1200px
+}
+.google-form-container-page iframe {
   width: 100% !important;
   height: 100%;
   border: 0;
