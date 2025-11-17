@@ -238,12 +238,13 @@ a:target {
 .content {
   width:100%;
   max-width:1180px;
-  margin:5rem auto;
+  margin:6rem auto 5rem auto;
   opacity:0;
-  transition:all 1s .3s ease-in-out;
+  transition:all .8s .3s ease-in-out;
 }
 .content.active {
   opacity:1;
+  margin:5rem auto 5rem auto;
 }
 .content h3 {
   margin:2em 0 .4em 0;
@@ -390,23 +391,59 @@ a:target {
   }
   .content .works li.work { 
     grid-template-columns: 1fr;
+    gap:1rem;
   }
 }
-.content .works h4 {
+@media (min-width: 1024px) {
+  .content .works {
+    grid-template-columns:1fr 1fr 1fr;
+  }
+  .content .works li.work { 
+    grid-template-columns: 1fr;
+    gap:0;
+  }
+}
+.content .works .work h4 {
   width:100%;
   margin:0 0 1em 0;
   font-size:18px;
 }
-.content .works h4 span {
+.content .works .work h4 span {
   font-size:14px;
   color:var(--mid-color);
   line-height:1em;
 }
 .content .works div img {
   width:100%;
+  padding-top:10px;
+}
+.content .works .work .description {
+  padding:0 1em 0 1em;
 }
 .content .works .work p {
   padding-bottom:1.8em;
+  font-size:14px;
+  width:100%;
+}
+.content .works .work p.phone {
+  width:100%;
+  text-align:right;
+}
+.content .works .work p.phone a[href^="tel:"] {
+  display:inline-block;
+  padding:.6em 1em;
+  background:var(--mid-color);
+  line-height:1em;
+  border-radius:1rem;
+  color:var(--base-color);
+  letter-spacing:1px;
+  color:var(--base-color);
+  text-decoration:none;
+  transition:all .4s 0s ease-in-out;
+  margin:0 0 0 auto;
+}
+.content .works .work p.phone a[href^="tel:"]:hover {
+  background:var(--light-color);
 }
 
 #contact-popup {
